@@ -84,7 +84,7 @@ public class ImportKey  {
     public static void main ( String args[]) {
         
         // change this if you want another password by default
-        String keypass = "importkey";
+        String keypass = "changeit";
         
         // change this if you want another alias by default
         String defaultalias = "importkey";
@@ -93,10 +93,7 @@ public class ImportKey  {
         String keystorename = System.getProperty("keystore");
 
         if (keystorename == null)
-            keystorename = System.getProperty("user.home")+
-                System.getProperty("file.separator")+
-                "keystore.ImportKey"; // especially this ;-)
-
+            keystorename = "keystore.jks";
 
         // parsing command line input
         String keyfile = "";
@@ -144,7 +141,7 @@ public class ImportKey  {
                 certs[0] = cert;
             } else {
                 System.out.println("Certificate chain length: "+c.size());
-                certs = (Certificate[])c.toArray();
+                certs = (Certificate[])c.toArray(new Certificate[0]);
             }
 
             // storing keystore
