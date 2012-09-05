@@ -2,6 +2,9 @@
 
 ## Overview
 
+Might want to look at [this blog post](http://www.agentbob.info/agentbob/79-AB.html) first.
+
+
 ### You want
 
 - Enable SSL with Glassfish v3
@@ -44,4 +47,9 @@
 ### 4. Import newly created key store to the default domain key store
 
     keytool -importkeystore -srckeystore keystore.jks -destkeystore <domaindir>/config/keystore.jks
+
+## Authors
+
+ - [Jochen Seifarth](http://www.agentbob.info/agentbob/23-AB.html)
+ - Sven Schober
 
