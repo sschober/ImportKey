@@ -51,5 +51,7 @@ Might want to look at [this blog post](http://www.agentbob.info/agentbob/79-AB.h
 ## Authors
 
  - [Jochen Seifarth](http://www.agentbob.info/agentbob/23-AB.html)
- - Sven Schober
+ - Joachim Karrer
+ - Jens Carlberg
+ - Sven Schober (minor additions)
 
