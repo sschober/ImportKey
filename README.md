@@ -42,11 +42,15 @@ Might want to look at [this blog post](http://www.agentbob.info/agentbob/79-AB.h
     javac ImportKey.java
     java -cp . ImportKey <fqdn>.key.der <fqdn>-full-chain.der
 
-   This results in a `keystore.jks` file.
+   This results in a `keystore.jks` file containing your certificate under the alias `importkey`.
 
 ### 4. Import newly created key store to the default domain key store
 
     keytool -importkeystore -srckeystore keystore.jks -destkeystore <domaindir>/config/keystore.jks
+
+### 5. Enable new SSL Certificate with glassfish
+
+Just go to your admin console and select the alias `importkey` as "Certificate Nickname" under *Configurations -> server-config -> HTTP Service -> Http Listeners -> http-listener-2* on the *SSL* tab.
 
 ## Authors
 
